@@ -46,4 +46,20 @@ Abstraction is the best tool for removing accidental complexity.
 
 - Evolvability: Easy for **Engineers to Change**
 
+
 ### Chapter 2 Data Models and Query Languages
+#### Relational Model
+
+SQL
+
+#### Document Model
+
+NoSQL
+
+#### The Object-Relational Mismatch
+*What is it?*
+
+#### Debate
+
+The relational model databases dominate the contemporary computer era, notwithstanding the document model databases regularly revived. When we choose a database type, we must consider the trio of the creeds: reliability, scalability, and maintainability.
+
