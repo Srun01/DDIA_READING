@@ -50,14 +50,15 @@ Abstraction is the best tool for removing accidental complexity.
 ### Chapter 2 Data Models and Query Languages
 #### Relational Model
 
-SQL
+SQL, use tables, columns, and rows to present the data structure.
 
 #### Document Model
 
-NoSQL
+NoSQL, more like an object-oriented data model.
 
 #### The Object-Relational Mismatch
-*What is it?*
+
+The structure of the object-oriented data is like a tree, but the relational data only contains tables, columns, and rows. The data transformation always need a join operation.
 
 #### Debate
 
