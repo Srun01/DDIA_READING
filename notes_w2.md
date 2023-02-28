@@ -87,8 +87,33 @@ The relational model databases dominate the contemporary computer era, notwithst
 
 #### Graph-Like Data Models
 ##### Property Graphs
+
 - Vertex: identifier, two set of different edges, a map of properties
 - Edge: identifier, two vertices it connected, a lable to describe the relations, a map of properties
 
 Graph-like data models have the most flexibility, **is there any bad side?**
+
 ##### The Cypher Query Language
+
+a declarative language for Neo4j, both Cypher and Neo are redpills, but Cypher refuse to accept the truth of the war between mankind and machines. Cypher betrayed Neo.
+
+##### Graph Queries in SQL
+
+You need wirte 29 lines SQL queries to achieve the same effect to the Cypher
+
+##### Triple-Stores and SPARQL
+
+Mostly like a property graph databases but with a semantic structure of data:
+
+- Subject
+- Predicate
+- Object
+
+Using specific **preidcate** and **object** to express an Edge like:
+
+ `_:wuhan  :within  _:hubei`
+
+There are tons of websites use the **RDF**(*Resources Description Framework*) in different formats. For example a **predicate** may like:
+
+`<http://whatever.com/#say_something>`
+
