@@ -53,7 +53,6 @@ Abstraction is the best tool for removing accidental complexity.
 ### Chapter 2 Data Models and Query Languages
 
 
-
 #### Relational Model Versus Document Model
 
 ##### Relational Model
@@ -117,3 +116,18 @@ There are tons of websites use the **RDF**(*Resources Description Framework*) in
 
 `<http://whatever.com/#say_something>`
 
+##### Datalog
+
+An ancient query language used as a foundation of some other languages.
+
+### Chapter 3 Storage and Retrieval
+
+#### Hash Indexes
+
+Use a log-structure storage and keep another table which consists of key and indexes of the position where the data have started on the disk.
+
+It has excellent write performance when writing data with repetitive key. But it requires lots of memory to store the hash indexes.
+
+There are also many benifits to use a log-structure storage when deleting, crash recovery, partially written, and concurrency control. But there are still some limitations like memory consuming and inefficient range queries.
+
+#### SSTables and LSM-Trees
