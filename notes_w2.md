@@ -131,3 +131,24 @@ It has excellent write performance when writing data with repetitive key. But it
 There are also many benifits to use a log-structure storage when deleting, crash recovery, partially written, and concurrency control. But there are still some limitations like memory consuming and inefficient range queries.
 
 #### SSTables and LSM-Trees
+
+*I found that most avdantages and disadvanteages come from a thought that whether the schema is explicit(enforced on write) or implicit(handled on read).*
+
+When add some enforced actions on the writing of data, there will be a lot of advantages on many aspects.
+
+- Key-value pair is sorted by key.
+- Every merged segment contains only a unique key.
+
+So is it **SSTable**(Sorted String Table).
+
+**LSM-tree** is short for Log-Structured Merge-Tree.
+
+Then we add some implicit parts to optimize the performance
+
+- Use a Bloom filter which can tell you whether the database contains a specific key.
+- Size-tiered, newer and smaller SSTables are successively merged into older and larger SSTables.
+- Leveled compaction, the key range is split up into smaller SSTables and older data is moved into seperate "levels", which allows the compaction to proceed more incrementally and use less disk space.
+
+#### B-trees
+
+Maybe the B is for Balance. It is the most widely used indexing structure, user fixed **pages** to store data, and data store at a **leaf page**. **Branching factor** is to determine how many ref a page can store. If you want to insert data between ref, you need to split the page.
